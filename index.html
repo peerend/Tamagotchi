@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <script src="js/jquery-1.11.1.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <title>Interstellar Shipping Calculator</title>
+</head>
+<body>
+  <div class='jumbotron'>
+    <h1 class='row col-sm-offset-2'>Interstellar Shipping Calculator</h1>
+  </div>
+
+  <div class='container col-sm-8 col-sm-offset-2'>
+    <h3>Taking your packages where no packages have gone before!</h3>
+    <form id='shippingCalc'>
+      <div class='form-group row'>
+      <label class = 'col-sm-8' for='userFrom'>Specify the package quadrant of origin</label>
+        <select name="userFrom" class='pullRight input-lg' id='userFrom'required>
+          <option>---</option>
+          <option value="alpha">Alpha</option>
+          <option value="beta">Beta</option>
+          <option value="delta">Delta</option>
+          <option value="gamma">Gamma</option>
+          <option value="transdimensional">Transdimensional</option>
+
+        </select>
+      </div>
+      <div class ='form-group row'>
+        <label class= 'col-sm-8' for='userTo'>Specify the package quadrant of destination</label>
+        <select name="userTo" class='pullRight input-lg' id='userTo' required>
+          <option>---</option>
+          <option value="alpha">Alpha</option>
+          <option value="beta">Beta</option>
+          <option value="delta">Delta</option>
+          <option value="gamma">Gamma</option>
+          <option value="transdimensional">Transdimensional</option>
+        </select>
+      </div>
+
+     <div class='form-group row' >
+        <label class='col-sm-8' for='weight'>How heavy is your package?</label>
+        <input class="pullRight input-lg" id='weight' type='text'>
+      </div>
+
+     <div class='form-group row' >
+        <label class='col-sm-8' for='dimensions'>What is the size of your package in centimeters?</label>
+        <input class="pullRight input-lg col-sm-1 dimensions" id='height' type='text'>
+        <input class="pullRight input-lg col-sm-1 dimensions" id='width' type='text'>
+        <input class="pullRight input-lg col-sm-1 dimensions" id='length' type='text'>
+      </div>
+
+      <div class='form-group row'>
+        <label class='col-sm-8' for='packageClass'>Specify the package shipping class</label>
+        <select name='packageClass' class='pullRight input-lg' id='packageClass' required>
+          <option>---</option>
+          <option value="slipStream">Slip Stream</option>
+          <option value="impulseDrive">Impulse Drive</option>
+          <option value="warpSpeed">Warp Speed</option>
+        </select>
+      </div>
+
+      <div class='form-group row pullRight'>
+        <button type="submit" class="btn btn-primary input-lg ">Calculate the cost!</button>
+      </div>
+
+      <div id='result' class='form-group row'>
+        <p>Your total cost is <span id='totalCost'></span> bars of latinum.</p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
