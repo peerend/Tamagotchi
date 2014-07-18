@@ -1,10 +1,11 @@
-##Interstellar Shipping Calculator
+##Gremlins!
+
     ________________        _
     \__(=======/_=_/____.--'-`--.___
               \ \   `,--,-.___.----'
             .--`\\--'../
            '---._____.|]
 
-Basic shipping calculator that takes package dimensions, speed of delivery, and determines shipping costs between solar systems.
-
+Gremlin themed Tamagotchi! There are no winners, only slow losers. Don't get Mogwai wet, feed him after midnight, or expose him to sunlight...
+#OR ELSE!
 Authors: Dylan Peerenboom & Jeremy Whitaker
