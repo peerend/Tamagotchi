@@ -36,10 +36,19 @@ var Mogwai = {
 $(document).ready(function(){
   $('form#MogwaiGame').submit(function(event){
 
-  var afroSamurai = object.create(Mogwai);
+  var afroSamurai = Object.create(Mogwai);
+  afroSamurai.initialize('Afro Samurai', 10, 10, 10);
+  console.log(afroSamurai);
+  $('#userPlay').onClick(afroSamurai.playLevels());
+  $('#userFood').onClick(afroSamurai.foodLevels());
+  $('#userDirty').onClick(afroSamurai.dirtyLevels());
 
-  document.getElementByID('playButton') = afroSamurai.playLevels();
-  console.log(afroSamurai.foodRisk)
+  if (afroSamurai.lost === true){
+    $('#result');
+  };
+
+  return afroSamurai.lost
+  event.preventDefault();
   });
 });
 

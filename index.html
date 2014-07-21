@@ -12,15 +12,24 @@
 </head>
 <body>
   <div class='jumbotron'>
-    <h1 class='row col-sm-offset-2'>My Mogwai! The only way to win is by losing slowly.</h1>
+    <h1 class='row col-sm-offset-2'>My Mogwai! </h1>
+    <h2 class='row col-sm-offset-2'>The only way to win is by losing slowly.</h2>
   </div>
 
   <div class='container col-sm-8 col-sm-offset-2'>
     <h3>Living life one click at a time</h3>
-    <form id='shippingCalc'>
+    <form id='MogwaiGame'>
       <div class='form-group row'>
       <label class = 'col-sm-8' for='userPlay'>Risk playing with your Mogwai?</label>
-        <input id='playButton' type='button' value='Play with Mogwai' onclick='Mogwai.playLevels();'/>
+        <input id='userPlay' type='button' value='Play with Mogwai' onlick="afroSamurai.playLevels();"/>
+      </div>
+      <div class='form-group row'>
+      <label class = 'col-sm-8' for='userFood'>Risk feeding your Mogwai?</label>
+        <input id='userFood' type='button' value='Feed Mogwai' onlick="afroSamurai.foodLevels();"/>
+      </div>
+      <div class='form-group row'>
+      <label class = 'col-sm-8' for='userDirty'>Risk washing your Mogwai?</label>
+        <input id='userDirty' type='button' value='Wash Mogwai' onlick="afroSamurai.dirtyLevels();"/>
       </div>
     </form>
   </div>
