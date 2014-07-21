@@ -36,7 +36,7 @@ describe("Mogwai", function() {
   describe("youLost", function() {
     it("you've lost if Mogwai is gremlin / dead / wet", function(){
       var myMogwai = Object.create(Mogwai);
-      myMogwai.initialize("Mogli",1,1,1);
+      myMogwai.initialize("Mogli",10,10,10);
       myMogwai.foodLevels();
       myMogwai.dirtyLevels();
       myMogwai.playLevels();

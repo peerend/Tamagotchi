@@ -2,7 +2,7 @@ var Mogwai = {
   initialize : function(creature, foodLevel, playLevel, dirtyLevel){
     this.creature = creature;
     this.foodLevel = foodLevel; //1 out of 4 feedings = after midnight
-    this.playLevel = playLevel; //1 out every 20 time mogwai gets play he is exposed to sunligh
+    this.playLevel = playLevel; //1 out every 20 time mogwai gets play he is exposed to sunlight
     this.dirtyLevel = dirtyLevel; //1 of 8 mogwai cleaned it gets wet
     this.lost;
   },
@@ -32,6 +32,16 @@ var Mogwai = {
         this.lost = false};
   }
 }
+
+$(document).ready(function(){
+  $('form#MogwaiGame').submit(function(event){
+
+  var afroSamurai = object.create(Mogwai);
+
+  document.getElementByID('playButton') = afroSamurai.playLevels();
+  console.log(afroSamurai.foodRisk)
+  });
+});
 
 //when button is clicked, s
 
