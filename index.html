@@ -21,15 +21,18 @@
     <form id='MogwaiGame'>
       <div class='form-group row'>
       <label class = 'col-sm-8' for='userPlay'>Risk playing with your Mogwai?</label>
-        <input id='userPlay' type='button' value='Play with Mogwai' onlick="afroSamurai.playLevels();"/>
+        <input id='userPlay' class='btn' type='button' value='Play with Mogwai' onlick="afroSamurai.playLevels();"/>
       </div>
       <div class='form-group row'>
       <label class = 'col-sm-8' for='userFood'>Risk feeding your Mogwai?</label>
-        <input id='userFood' type='button' value='Feed Mogwai' onlick="afroSamurai.foodLevels();"/>
+        <input id='userFood' class='btn' type='button' value='Feed Mogwai' onlick="afroSamurai.foodLevels();"/>
       </div>
       <div class='form-group row'>
       <label class = 'col-sm-8' for='userDirty'>Risk washing your Mogwai?</label>
-        <input id='userDirty' type='button' value='Wash Mogwai' onlick="afroSamurai.dirtyLevels();"/>
+        <input id='userDirty' class='btn' type='button' value='Wash Mogwai' onlick="afroSamurai.dirtyLevels();"/>
+      </div>
+      <div id='result' class='form-group row'>
+        <p>Your Mogwai is Dead!</p>
       </div>
     </form>
   </div>

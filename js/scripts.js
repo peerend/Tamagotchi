@@ -38,7 +38,7 @@ $(document).ready(function(){
 
   var afroSamurai = Object.create(Mogwai);
   afroSamurai.initialize('Afro Samurai', 10, 10, 10);
-  console.log(afroSamurai);
+  console.log(afroSamurai.foodLevel);
   $('#userPlay').onClick(afroSamurai.playLevels());
   $('#userFood').onClick(afroSamurai.foodLevels());
   $('#userDirty').onClick(afroSamurai.dirtyLevels());
@@ -47,7 +47,7 @@ $(document).ready(function(){
     $('#result');
   };
 
-  return afroSamurai.lost
+  return afroSamurai.lost;
   event.preventDefault();
   });
 });
