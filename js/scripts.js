@@ -25,40 +25,53 @@ var Mogwai = {
     }
   },
   youLost : function(){
-      if(this.playLevel <=0 || this.foodLevel <=0 || this.dirtyLevel <= 0){
-        this.lost = true;
+      if((this.playLevel <=0) || (this.foodLevel <=0) || (this.dirtyLevel) <= 0){
+        this.lost = false;
         //return this.youLose;
       } else {
-        this.lost = false};
+        this.lost = true};
+  },
+  displayOutput: function() {
+    $("#output-food").text(this.foodLevel);
+    $("#output-clean").text(this.dirtyLevel);
+    $("#output-activity").text(this.playLevel);
   }
 }
 
 $(document).ready(function(){
+
+  $("form#MogwaiGame").find("input").focus();
+
   $('form#MogwaiGame').submit(function(event){
-
-  var afroSamurai = Object.create(Mogwai);
-  afroSamurai.initialize('Afro Samurai', 10, 10, 10);
-  console.log(afroSamurai.foodLevel);
-  $('#userPlay').onClick(afroSamurai.playLevels());
-  $('#userFood').onClick(afroSamurai.foodLevels());
-  $('#userDirty').onClick(afroSamurai.dirtyLevels());
-
-  if (afroSamurai.lost === true){
-    $('#result');
-  };
-
-  return afroSamurai.lost;
-  event.preventDefault();
+    $('#column2, #column3, #output-row').show();
+    event.preventDefault();
+    var afroSamurai = Object.create(Mogwai);
+    var mogwaiName = $('#mogwaiName').val();
+    afroSamurai.initialize(mogwaiName, 10, 10, 10);
+    $("#output-name").text(afroSamurai.creature);
+    afroSamurai.displayOutput();
+    $("#check-btn").click(function() {
+      afroSamurai.youLost();
+      console.log(afroSamurai.foodLevel);
+      afroSamurai.displayOutput();
+      if (!afroSamurai.lost){
+        alert('Sorry ' + $('#mogwaiName').val() +' is dead:(');
+        $('#column2, #column3, #output-row').hide();
+      }else {
+        alert('Hurray! ' + $('#mogwaiName').val() +' is alive:)');
+      }
+    });
+    $("#feed-btn").click(function(){
+      afroSamurai.foodLevels();
+      afroSamurai.displayOutput();
+    });
+    $("#wash-btn").click(function(){
+      afroSamurai.dirtyLevels();
+      afroSamurai.displayOutput();
+    });
+    $("#activity-btn").click(function(){
+      afroSamurai.playLevels();
+      afroSamurai.displayOutput();
+    });
   });
 });
-
-//when button is clicked, s
-
-  // var myMonster = Object.create(Monster);
-  // // myMonster.initialize(inputtedCreature, inputtedFoodLevel, inputtedPet, inputtedSleepLevel, inputtedActivityLevel);
-  // timePasses: function(){
-  //   setInterval(function(){
-  //     this.foodLevel = this.foodLevel-1,
-  //     this.playLevel = this.playLevel-1,
-  //     this.dirtyLevel = this.dirtyLevel-1
-  //   },1000);

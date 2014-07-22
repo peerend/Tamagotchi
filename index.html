@@ -8,33 +8,51 @@
   <script src="js/jquery-1.11.1.js"></script>
   <script src="js/scripts.js"></script>
 
-  <title>My Mogwai!</title>
+  <title>My Mogwai</title>
 </head>
 <body>
   <div class='jumbotron'>
     <h1 class='row col-sm-offset-2'>My Mogwai! </h1>
-    <h2 class='row col-sm-offset-2'>The only way to win is by losing slowly.</h2>
+    <h2 class='row col-sm-offset-2'>Don't let your Mogwai get wet, sunlight, or eat after Midnight!</h2>
   </div>
 
-  <div class='container col-sm-8 col-sm-offset-2'>
-    <h3>Living life one click at a time</h3>
-    <form id='MogwaiGame'>
-      <div class='form-group row'>
-      <label class = 'col-sm-8' for='userPlay'>Risk playing with your Mogwai?</label>
-        <input id='userPlay' class='btn' type='button' value='Play with Mogwai' onlick="afroSamurai.playLevels();"/>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-3' id ='column1'>
+        <form role='form' id='MogwaiGame'>
+          <div class='form-group'>
+            <label for='initName'>Name your pet</label>
+            <input id='mogwaiName' class='form-control' type='text'>
+            <button type = 'submit' id='name-btn' class='btn btn-primary'>Add Name</button>
+          </div>
+        </form>
       </div>
-      <div class='form-group row'>
-      <label class = 'col-sm-8' for='userFood'>Risk feeding your Mogwai?</label>
-        <input id='userFood' class='btn' type='button' value='Feed Mogwai' onlick="afroSamurai.foodLevels();"/>
+      <div class='col-md-6' id ='column2'>
+        <button type = 'button' class='btn btn-success col2-style' id='feed-btn'>Feed Mogwai</button>
+        <button type='button' class='btn btn-success col2-style' id='wash-btn'>Wash</button>
+        <button type='button' class='btn btn-success col2-style' id='activity-btn'>Play</button>
       </div>
-      <div class='form-group row'>
-      <label class = 'col-sm-8' for='userDirty'>Risk washing your Mogwai?</label>
-        <input id='userDirty' class='btn' type='button' value='Wash Mogwai' onlick="afroSamurai.dirtyLevels();"/>
+      <div class='col-md-3' id ='column3'>
+        <h5>Use 'Check in' to increment time and check pet status</h5>
+        <button type = 'button' class='interactive btn btn-warning' id='check-btn'>Check in on Mogwai</button>
       </div>
-      <div id='result' class='form-group row'>
-        <p>Your Mogwai is Dead!</p>
+    </div>
+    <div class ='row' id='output-row'>
+      <div id='output-name' class='col-md-3'>
       </div>
-    </form>
+      <div class='col-md-3'>
+        <h3>Food Level</h3>
+        <div id='output-food'></div>
+      </div>
+      <div class='col-md-3'>
+        <h3>Cleanliness Level</h3>
+        <div id='output-clean'></div>
+      </div>
+      <div class='col-md-3'>
+        <h3>Activity Level</h3>
+        <div id='output-activity'></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
